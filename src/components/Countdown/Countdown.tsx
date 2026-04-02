@@ -14,7 +14,7 @@ function getTimeLeft() {
   return {
     days: Math.floor(difference / (1000 * 60 * 60 * 24)),
     hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-    minutes: Math.floor((difference / 1000 / 60) % 60),
+    minutes: Math.floor((difference / (1000 * 60)) % 60),
     seconds: Math.floor((difference / 1000) % 60),
   };
 }
@@ -31,9 +31,9 @@ export function Countdown() {
   }, []);
 
   return (
-    <div className="countdown card">
-      <p className="countdown__label">Nedräkning</p>
-      <h2>Snart är det dags</h2>
+    <section className="countdown panel-card" aria-label="Nedräkning till festen">
+      <p className="countdown__label">countdown to party time</p>
+      <h3 className="countdown__title">Snart är det dags 🎉</h3>
 
       <div className="countdown__grid">
         <div>
@@ -53,6 +53,6 @@ export function Countdown() {
           <span>sekunder</span>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

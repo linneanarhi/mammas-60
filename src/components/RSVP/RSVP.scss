@@ -1,31 +1,53 @@
 @use '../../styles/variables' as *;
 
-.rsvp__layout {
+.rsvp__wrapper {
   display: grid;
   gap: 1.5rem;
+  padding: 1rem;
+  background: rgba(255, 241, 244, 0.72);
 
-  @media (min-width: 960px) {
-    grid-template-columns: 0.8fr 1.2fr;
-    align-items: start;
+  @media (min-width: 1024px) {
+    grid-template-columns: 0.75fr 1.25fr;
+    padding: 1.25rem;
   }
 }
 
-.rsvp__content,
-.rsvp__form-wrapper {
-  padding: 1.5rem;
+.rsvp__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
 }
 
-.rsvp__eyebrow {
-  color: $primary;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 0.85rem;
+.rsvp__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.rsvp__mini-note {
+  padding: 1rem;
+  background: $yellow;
+}
+
+.rsvp__mini-label {
+  margin-bottom: 0.35rem;
+  font-size: 0.8rem;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: $berry;
+}
+
+.rsvp__form {
+  padding: 0.5rem;
+  background: rgba(255, 248, 237, 0.95);
 }
 
 .rsvp__iframe {
   width: 100%;
   min-height: 900px;
   border: 0;
-  border-radius: 16px;
+  border-radius: 18px;
+  background: white;
 }

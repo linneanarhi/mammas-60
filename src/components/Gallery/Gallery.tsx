@@ -1,26 +1,47 @@
 import './Gallery.scss';
-
-const images = [
-  'https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1464349153735-7db50ed83c84?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=1200&q=80',
-];
+import { partyData } from '../../data/partyData';
 
 export function Gallery() {
   return (
-    <section className="section">
+    <section className="gallery section">
       <div className="section-container">
-        <div className="gallery__intro">
-          <h2>Galleri</h2>
-          <p>Byt ut bilderna mot riktiga familjebilder senare.</p>
+        <div className="gallery__header">
+          <span className="sticker">memory board</span>
+          <h2 className="section-title">En sida full av känsla och minnen</h2>
+          <p className="section-copy">
+            Här kan du lägga in riktiga bilder på mamma, familjen, roliga gamla
+            foton eller fina ögonblick som gör sidan mer personlig.
+          </p>
         </div>
 
-        <div className="gallery__grid">
-          {images.map((image, index) => (
-            <div className="gallery__item card" key={index}>
-              <img src={image} alt={`Galleri bild ${index + 1}`} />
+        <div className="gallery__board paper-card">
+          <div className="gallery__grid">
+            <div className="gallery__item gallery__item--a panel-card">
+              <img src={partyData.photos[0]} alt="Galleri bild 1" />
             </div>
-          ))}
+
+            <div className="gallery__item gallery__item--b panel-card">
+              <img src={partyData.photos[2]} alt="Galleri bild 2" />
+            </div>
+
+            <div className="gallery__item gallery__item--c panel-card">
+              <img src={partyData.photos[3]} alt="Galleri bild 3" />
+            </div>
+
+            <div className="gallery__item gallery__item--d panel-card">
+              <img src={partyData.photos[4]} alt="Galleri bild 4" />
+            </div>
+
+            <div className="gallery__item gallery__item--e panel-card">
+              <img src={partyData.photos[1]} alt="Galleri bild 5" />
+            </div>
+          </div>
+
+          <div className="gallery__stickers">
+            <span className="sticker">main character archive</span>
+            <span className="sticker">cute memories only</span>
+            <span className="sticker">birthday moodboard</span>
+          </div>
         </div>
       </div>
     </section>

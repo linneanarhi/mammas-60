@@ -3,32 +3,44 @@ import { partyData } from '../../data/partyData';
 
 export function RSVP() {
   return (
-    <section className="section rsvp" id="osa">
-      <div className="section-container rsvp__layout">
-        <div className="card rsvp__content">
-          <p className="rsvp__eyebrow">OSA</p>
-          <h2>Anmäl dig här</h2>
-          <p>
-            Fyll i formuläret för att meddela om du kommer, hur många ni blir
-            och om du har någon specialkost.
-          </p>
+    <section className="rsvp section" id="osa">
+      <div className="section-container">
+        <div className="rsvp__wrapper paper-card">
+          <div className="rsvp__intro">
+            <span className="sticker">RSVP / OSA</span>
+            <h2 className="section-title">Säg gärna till om du kommer</h2>
+            <p className="section-copy">
+              Fyll i formuläret med namn, antal gäster och eventuell specialkost.
+              Vi vill gärna veta så vi kan planera kvällen på bästa sätt.
+            </p>
 
-          <a
-            className="btn btn--primary"
-            href={partyData.formUrl.replace('?embedded=true', '')}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Öppna formuläret i ny flik
-          </a>
-        </div>
+            <div className="rsvp__actions">
+              <a
+                className="btn btn--primary"
+                href={partyData.formUrlPlain}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Öppna formuläret i ny flik
+              </a>
+            </div>
 
-        <div className="card rsvp__form-wrapper">
-          <iframe
-            title="OSA till mammas 60-årsfest"
-            src={partyData.formUrl}
-            className="rsvp__iframe"
-          />
+            <div className="rsvp__mini-note panel-card">
+              <p className="rsvp__mini-label">tiny note</p>
+              <p>
+                Om formuläret känns litet i mobilen är det bättre att öppna det i
+                en egen flik.
+              </p>
+            </div>
+          </div>
+
+          <div className="rsvp__form panel-card">
+            <iframe
+              title="OSA till mammas 60-årsfest"
+              src={partyData.formUrl}
+              className="rsvp__iframe"
+            />
+          </div>
         </div>
       </div>
     </section>
