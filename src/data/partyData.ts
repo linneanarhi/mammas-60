@@ -4,12 +4,12 @@ export const partyData = {
   heroSubtitle:
     'En kväll fylld av skratt, kärlek, god mat och fina minnen. Vi hoppas att du vill fira denna stora dag tillsammans med oss.',
   introLabel: 'birthday website',
-  dateLabel: 'Lördag 15 augusti 2026',
-  timeLabel: '15:00 tills sent',
-  locationLabel: 'Exempelvägen 12, Malmö',
+  dateLabel: 'Lördag 3 oktober 2026',
+  timeLabel: '17:00 tills sent',
+  locationLabel: 'Norrtälje',
   dressCode: 'Färgglatt, festligt och sommarfint',
   contactName: 'Linnea',
-  contactEmail: 'linnea@example.com',
+  contactEmail: 'linnea@example och Lovisa.com',
   formUrl:
     'https://docs.google.com/forms/d/e/1FAIpQLSfS_QKiFYfd9Xo3NPd5nmEBnAOA5CrqK5-V_gqmb4l9E47smw/viewform?embedded=true',
   formUrlPlain:
