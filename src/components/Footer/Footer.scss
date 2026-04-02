@@ -1,0 +1,11 @@
+@use '../../styles/variables' as *;
+
+.footer__box {
+  padding: 2rem;
+  text-align: center;
+
+  p {
+    color: $text-muted;
+    margin-bottom: 0;
+  }
+}

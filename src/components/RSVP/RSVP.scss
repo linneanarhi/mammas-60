@@ -1,0 +1,31 @@
+@use '../../styles/variables' as *;
+
+.rsvp__layout {
+  display: grid;
+  gap: 1.5rem;
+
+  @media (min-width: 960px) {
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: start;
+  }
+}
+
+.rsvp__content,
+.rsvp__form-wrapper {
+  padding: 1.5rem;
+}
+
+.rsvp__eyebrow {
+  color: $primary;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.rsvp__iframe {
+  width: 100%;
+  min-height: 900px;
+  border: 0;
+  border-radius: 16px;
+}

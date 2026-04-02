@@ -1,0 +1,42 @@
+@use '../../styles/variables' as *;
+
+.details__intro {
+  margin-bottom: 2rem;
+
+  h2 {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+  }
+
+  p {
+    color: $text-muted;
+  }
+}
+
+.details__grid {
+  display: grid;
+  gap: 1rem;
+
+  @media (min-width: 700px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1000px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.details__item {
+  padding: 1.5rem;
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    margin: 0;
+    color: $text-muted;
+    line-height: 1.6;
+  }
+}

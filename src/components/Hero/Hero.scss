@@ -1,0 +1,45 @@
+@use '../../styles/variables' as *;
+
+.hero {
+  background: linear-gradient(180deg, #fff4f6 0%, #fffaf8 100%);
+}
+
+.hero__layout {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+
+  @media (min-width: 900px) {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+}
+
+.hero__content {
+  h1 {
+    margin: 0 0 1rem;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.05;
+  }
+}
+
+.hero__eyebrow {
+  margin-bottom: 1rem;
+  color: $primary;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.hero__text {
+  max-width: 60ch;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: $text-muted;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
