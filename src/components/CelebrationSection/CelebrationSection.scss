@@ -1,0 +1,42 @@
+@use '../../styles/variables' as *;
+
+.celebration__grid {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+
+  @media (min-width: 720px) {
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr);
+  }
+}
+
+.celebration__image {
+  border: 1px solid $line;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.42);
+
+  img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    filter: grayscale(100%);
+  }
+}
+
+.celebration__content {
+  padding-top: 0.4rem;
+}
+
+.celebration__contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.4rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid $line;
+
+  a {
+    font-weight: 700;
+    color: $berry-900;
+  }
+}

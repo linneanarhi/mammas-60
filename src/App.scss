@@ -1,3 +1,12 @@
 .site-shell {
   min-height: 100vh;
+  padding: clamp(1rem, 3vw, 2rem);
+}
+
+.invitation-paper {
+  width: min(100%, 880px);
+  margin: 0 auto;
+  background: rgba(251, 246, 238, 0.98);
+  box-shadow: 0 36px 80px rgba(63, 45, 34, 0.18);
+  overflow: hidden;
 }

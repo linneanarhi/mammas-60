@@ -1,30 +1,39 @@
-$bg-main: #f7eedf;
-$bg-soft: #fdf8ef;
-$surface: #fffaf4;
-$surface-2: #fff1f4;
+$bg-main: #f4eadf;
+$bg-soft: #ebdfd1;
+$surface: #fcf7f0;
+$surface-strong: #f1e7dc;
 
-$text: #2b2523;
-$text-soft: #6a5e59;
+$text: #2d241f;
+$text-soft: #6a5c52;
+$text-light: #f8f0e5;
 
-$line: #2b2523;
-$border: #d8c6bc;
+$line: rgba(68, 55, 44, 0.14);
+$line-strong: rgba(68, 55, 44, 0.26);
 
-$rose: #ea8ea2;
-$rose-dark: #c85f78;
-$yellow: #f0c44c;
-$green: #b8cc76;
-$mint: #d8e7c7;
-$sky: #bfd9eb;
-$berry: #6d1735;
-$red: #d95a48;
-$cream: #fff8ed;
+$forest-900: #5f735f;
+$forest-800: #728770;
+$forest-700: #8ea08c;
 
-$shadow-soft: 0 12px 30px rgba(67, 37, 28, 0.08);
-$shadow-card: 0 14px 40px rgba(67, 37, 28, 0.12);
+$blue-900: #5f7487;
+$blue-800: #778da1;
+$blue-500: #9fb0bf;
+
+$berry-900: #8a4f63;
+$berry-800: #a86478;
+$rose-500: #ddb5a4;
+$terracotta-700: #b96a4d;
+$terracotta-500: #cb8a6f;
+
+$sand: #dcc0a3;
+$gold-muted: #af8e67;
+
+$shadow-soft: 0 18px 36px rgba(52, 40, 31, 0.08);
+$shadow-card: 0 14px 30px rgba(52, 40, 31, 0.1);
 
 $radius-sm: 12px;
-$radius-md: 22px;
-$radius-lg: 36px;
-$radius-xl: 52px;
+$radius-md: 18px;
+$radius-lg: 28px;
+$radius-xl: 42px;
 
-$container: 1180px;
+$container: 760px;
+$section-space: clamp(3.5rem, 8vw, 5.5rem);
