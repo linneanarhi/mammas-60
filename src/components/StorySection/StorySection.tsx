@@ -1,5 +1,6 @@
 import './StorySection.scss';
 import { motion } from 'framer-motion';
+import frameImage from '../../assets/frame-om-kvallen.jpg';
 import { partyData } from '../../data/partyData';
 
 export function StorySection() {
@@ -13,7 +14,14 @@ export function StorySection() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.7 }}
         >
-          <img src={partyData.galleryImages.intro} alt="Porträtt av mamma i vinden" />
+          <div
+            className="story__frame"
+            style={{ backgroundImage: `url(${frameImage})` }}
+          >
+            <div className="story__frame-inner">
+              <img src={partyData.galleryImages.intro} alt="Porträtt av mamma i vinden" />
+            </div>
+          </div>
         </motion.div>
 
         <motion.div

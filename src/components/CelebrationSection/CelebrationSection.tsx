@@ -1,10 +1,11 @@
 import './CelebrationSection.scss';
 import { motion } from 'framer-motion';
+import frameImage from '../../assets/frame-om-kvallen.jpg';
 import { partyData } from '../../data/partyData';
 
 export function CelebrationSection() {
-  const [primaryPhone, secondaryPhone] = partyData.contactPhones;
-  const [primaryEmail, secondaryEmail] = partyData.contactEmails;
+  const [linneaPhone, lovisaPhone] = partyData.contactPhones;
+  const [linneaEmail, lovisaEmail] = partyData.contactEmails;
 
   return (
     <section className="celebration section">
@@ -16,7 +17,14 @@ export function CelebrationSection() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.65 }}
         >
-          <img src={partyData.galleryImages.detail} alt="Detaljbild på mamma" />
+          <div
+            className="celebration__frame"
+            style={{ backgroundImage: `url(${frameImage})` }}
+          >
+            <div className="celebration__frame-inner">
+              <img src={partyData.galleryImages.detail} alt="Detaljbild på mamma" />
+            </div>
+          </div>
         </motion.div>
 
         <motion.div
@@ -31,10 +39,16 @@ export function CelebrationSection() {
           <p className="section-copy">{partyData.speechText}</p>
 
           <div className="celebration__contact">
-            <a href={`tel:${primaryPhone}`}>{primaryPhone}</a>
-            <a href={`tel:${secondaryPhone}`}>{secondaryPhone}</a>
-            <a href={`mailto:${primaryEmail}`}>{primaryEmail}</a>
-            <a href={`mailto:${secondaryEmail}`}>{secondaryEmail}</a>
+            <p>
+              <span>Linnea</span>{' '}
+              <a href={`tel:${linneaPhone}`}>{linneaPhone}</a>{' '}
+              <a href={`mailto:${linneaEmail}`}>{linneaEmail}</a>
+            </p>
+            <p>
+              <span>Lovisa</span>{' '}
+              <a href={`tel:${lovisaPhone}`}>{lovisaPhone}</a>{' '}
+              <a href={`mailto:${lovisaEmail}`}>{lovisaEmail}</a>
+            </p>
           </div>
         </motion.div>
       </div>

@@ -69,6 +69,7 @@ export function RSVPSection() {
             />
           </motion.div>
         </div>
+        <div className="rsvp__stripe" />
       </div>
     </section>
   );

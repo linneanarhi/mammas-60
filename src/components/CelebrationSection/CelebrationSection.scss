@@ -11,10 +11,6 @@
 }
 
 .celebration__image {
-  border: 1px solid $line;
-  padding: 0.75rem;
-  background: rgba(255, 255, 255, 0.42);
-
   img {
     width: 100%;
     aspect-ratio: 4 / 5;
@@ -23,20 +19,55 @@
   }
 }
 
+.celebration__frame {
+  padding: clamp(1.5rem, 3vw, 2rem);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+
+  @media (max-width: 640px) {
+    padding: 1rem;
+  }
+}
+
+.celebration__frame-inner {
+  padding: clamp(1rem, 2.4vw, 1.4rem);
+
+  @media (max-width: 640px) {
+    padding: 0.8rem;
+  }
+}
+
 .celebration__content {
   padding-top: 0.4rem;
 }
 
 .celebration__contact {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem 1.4rem;
+  display: grid;
+  gap: 0.8rem;
   margin-top: 1.5rem;
   padding-top: 1rem;
   border-top: 1px solid $line;
 
+  p {
+    margin: 0;
+    line-height: 1.8;
+  }
+
+  span {
+    display: inline-block;
+    min-width: 58px;
+    font-weight: 700;
+    color: $text;
+  }
+
   a {
     font-weight: 700;
     color: $berry-900;
+    margin-right: 0.75rem;
+  }
+
+  a:last-child {
+    margin-right: 0;
   }
 }
