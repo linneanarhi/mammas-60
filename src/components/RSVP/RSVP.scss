@@ -4,7 +4,7 @@
   display: grid;
   gap: 1.5rem;
   padding: 1rem;
-  background: rgba(255, 241, 244, 0.72);
+  background: $sky;
 
   @media (min-width: 1024px) {
     grid-template-columns: 0.75fr 1.25fr;
