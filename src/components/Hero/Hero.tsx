@@ -1,71 +1,65 @@
 import './Hero.scss';
+import { motion } from 'framer-motion';
 import { partyData } from '../../data/partyData';
-import { Countdown } from '../Countdown/Countdown';
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 22 },
+  visible: { opacity: 1, y: 0 },
+};
 
 export function Hero() {
   return (
-    <section className="hero section">
-      <div className="section-container">
-        <div className="hero__window paper-card">
-          <div className="hero__window-top">
-            <div className="browser-dots" aria-hidden="true">
-              <span />
-              <span />
-              <span />
-            </div>
+    <section className="hero" id="top">
+      <motion.div
+        className="hero__media"
+        initial={{ opacity: 0, scale: 0.98 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+      >
+        <img src={partyData.galleryImages.hero} alt="Porträtt av mamma" className="hero__image" />
+        <div className="hero__overlay" />
+      </motion.div>
 
-            <p className="hero__window-label">{partyData.introLabel}</p>
-          </div>
+      <div className="site-container">
+        <motion.div
+          className="hero__card"
+          initial="hidden"
+          animate="visible"
+          transition={{ staggerChildren: 0.12 }}
+        >
+          <motion.span variants={fadeUp} className="eyebrow">
+            {partyData.heroBadge}
+          </motion.span>
 
-          <div className="hero__search panel-card">
-            <span className="hero__search-text">Searching for the best birthday ever...</span>
-          </div>
+          <motion.h1 variants={fadeUp} className="section-title hero__title">
+            {partyData.heroTitle}
+          </motion.h1>
 
-          <div className="hero__content">
-            <div className="hero__left">
-              <span className="sticker hero__sticker hero__sticker--top">60 years of icon energy</span>
+          <motion.p variants={fadeUp} className="hero__subtitle">
+            {partyData.heroSubtitle}
+          </motion.p>
 
-              <p className="hero__eyebrow">{partyData.heroEyebrow}</p>
-              <h1 className="hero__title">
-                <span className="script">Happy</span> Birthday
-              </h1>
+          <motion.p variants={fadeUp} className="hero__invitation">
+            {partyData.invitationLine}
+          </motion.p>
 
-              <h2 className="hero__headline section-title">{partyData.heroTitle}</h2>
-              <p className="section-copy">{partyData.heroSubtitle}</p>
+          <motion.div variants={fadeUp} className="hero__meta">
+            <p>{partyData.date}</p>
+            <span />
+            <p>{partyData.location}</p>
+            <span />
+            <p>{partyData.time}</p>
+          </motion.div>
 
-              <div className="hero__actions">
-                <a href="#osa" className="btn btn--primary">
-                  OSA här
-                </a>
-                <a href="#info" className="btn btn--secondary">
-                  Se festinfo
-                </a>
-              </div>
-
-              <div className="hero__facts">
-                {partyData.tinyFacts.map((fact) => (
-                  <span key={fact}>{fact}</span>
-                ))}
-              </div>
-            </div>
-
-            <div className="hero__right">
-              <div className="hero__collage">
-                <div className="hero__photo hero__photo--large panel-card">
-                  <img src={partyData.photos[0]} alt="Festlig inspirationsbild" />
-                </div>
-
-                <div className="hero__photo hero__photo--small panel-card">
-                  <img src={partyData.photos[1]} alt="Porträtt inspirationsbild" />
-                </div>
-
-                <div className="hero__note sticker">main character vibes</div>
-              </div>
-
-              <Countdown />
-            </div>
-          </div>
-        </div>
+          <motion.div variants={fadeUp} className="hero__actions">
+            <a href="#osa" className="btn btn--primary">
+              OSA
+            </a>
+            <a href="#details" className="btn btn--secondary">
+              Läs detaljer
+            </a>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

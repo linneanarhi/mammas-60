@@ -1,17 +1,20 @@
-@mixin respond($breakpoint) {
-  @if $breakpoint == sm {
-    @media (min-width: 640px) { @content; }
-  }
+@mixin container {
+  width: min(100% - 1.5rem, 1180px);
+  margin-inline: auto;
 
-  @if $breakpoint == md {
-    @media (min-width: 768px) { @content; }
+  @media (min-width: 768px) {
+    width: min(100% - 3rem, 1180px);
   }
+}
 
-  @if $breakpoint == lg {
-    @media (min-width: 1024px) { @content; }
-  }
+@mixin section-spacing {
+  padding: clamp(5rem, 10vw, 8rem) 0;
+}
 
-  @if $breakpoint == xl {
-    @media (min-width: 1280px) { @content; }
+@mixin hover-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-3px);
   }
 }
