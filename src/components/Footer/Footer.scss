@@ -25,6 +25,19 @@
   font-weight: 700;
 }
 
+.footer__copy {
+  position: relative;
+}
+
+.footer__decor {
+  position: absolute;
+  top: -0.2rem;
+  right: 0;
+  width: 52px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
 .footer__image {
   justify-self: end;
   width: 100%;

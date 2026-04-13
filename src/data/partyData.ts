@@ -16,7 +16,7 @@ export const partyData = {
   time: '17:00',
   location: 'Imperiet Industries',
   address: 'Baldersgatan 16, 761 50 Norrt\u00e4lje',
-  contactName: 'Linnea och Lovisa N\u00e4rhi',
+  contactName: 'Linnea och Lovisa',
   contactPhones: ['0725752777', '0725866999'],
   contactEmails: ['narhi07@gmail.com', 'narhi02@gmail.com'],
   rsvpDeadline: '1 juli 2026',

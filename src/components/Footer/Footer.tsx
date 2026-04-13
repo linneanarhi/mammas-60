@@ -1,5 +1,6 @@
 import './Footer.scss';
 import { motion } from 'framer-motion';
+import decorTwo from '../../assets/decor-2.png';
 import { partyData } from '../../data/partyData';
 
 export function Footer() {
@@ -16,12 +17,12 @@ export function Footer() {
           transition={{ duration: 0.6 }}
         >
           <div className="footer__copy">
+            <img src={decorTwo} alt="" aria-hidden="true" className="footer__decor" />
             <span className="eyebrow">Välkommen</span>
             <h2 className="footer__title">{partyData.closingHeading}</h2>
             <p className="section-copy">
               {partyData.closingText} Har du frågor innan dagen är det bara att
-              höra av dig till {partyData.contactName} på{' '}
-              <a href={`mailto:${primaryEmail}`}>{primaryEmail}</a>.
+              höra av dig till {partyData.contactName}!
             </p>
           </div>
 

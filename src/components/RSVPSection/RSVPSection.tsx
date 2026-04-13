@@ -1,5 +1,6 @@
 import './RSVPSection.scss';
 import { motion } from 'framer-motion';
+import decorOne from '../../assets/decor-1.png';
 import { partyData } from '../../data/partyData';
 
 export function RSVPSection() {
@@ -18,6 +19,7 @@ export function RSVPSection() {
             viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.65 }}
           >
+            <img src={decorOne} alt="" aria-hidden="true" className="rsvp__decor" />
             <span className="eyebrow">OSA</span>
             <h2 className="section-title">{partyData.rsvpHeading}</h2>
             <p className="section-copy">{partyData.rsvpText}</p>

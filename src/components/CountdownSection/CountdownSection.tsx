@@ -1,6 +1,7 @@
 import './CountdownSection.scss';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import decorTwo from '../../assets/decor-2.png';
 import { partyData } from '../../data/partyData';
 
 type CountdownUnit = {
@@ -55,6 +56,7 @@ export function CountdownSection() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
         >
+          <img src={decorTwo} alt="" aria-hidden="true" className="countdown__decor" />
           <span className="eyebrow">Nedräkning</span>
           <h2 className="section-title" id="countdown-title">
             {partyData.countdownTitle}

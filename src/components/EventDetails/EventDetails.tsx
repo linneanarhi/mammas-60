@@ -1,5 +1,6 @@
 import './EventDetails.scss';
 import { motion } from 'framer-motion';
+import decorThree from '../../assets/decor-3.png';
 import { partyData } from '../../data/partyData';
 
 export function EventDetails() {
@@ -13,6 +14,7 @@ export function EventDetails() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
         >
+          <img src={decorThree} alt="" aria-hidden="true" className="details__decor" />
           <span className="eyebrow">Praktiskt</span>
           <h2 className="section-title">{partyData.detailsHeading}</h2>
           <p className="section-copy">{partyData.detailsLead}</p>

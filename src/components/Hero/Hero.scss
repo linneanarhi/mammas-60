@@ -43,6 +43,19 @@
   }
 }
 
+.hero__decor {
+  position: absolute;
+  width: 70px;
+  opacity: 0.8;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.hero__decor--corner {
+  top: 1rem;
+  right: 1rem;
+}
+
 .hero__title {
   margin-inline: auto;
   max-width: 8ch;

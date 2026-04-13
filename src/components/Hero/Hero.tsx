@@ -1,5 +1,6 @@
 import './Hero.scss';
 import { motion } from 'framer-motion';
+import decorOne from '../../assets/decor-1.png';
 import { partyData } from '../../data/partyData';
 
 const fadeUp = {
@@ -27,6 +28,8 @@ export function Hero() {
           animate="visible"
           transition={{ staggerChildren: 0.12 }}
         >
+          <img src={decorOne} alt="" aria-hidden="true" className="hero__decor hero__decor--corner" />
+
           <motion.span variants={fadeUp} className="eyebrow">
             {partyData.heroBadge}
           </motion.span>
