@@ -1,6 +1,6 @@
 @use './variables' as *;
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&family=Caveat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
 *,
 *::before,
@@ -14,13 +14,12 @@ html {
 
 body {
   margin: 0;
-  background:
-    radial-gradient(circle at 15% 15%, rgba(240, 196, 76, 0.35) 0, rgba(240, 196, 76, 0.35) 28px, transparent 29px),
-    radial-gradient(circle at 85% 12%, rgba(184, 204, 118, 0.25) 0, rgba(184, 204, 118, 0.25) 24px, transparent 25px),
-    radial-gradient(circle at 92% 82%, rgba(234, 142, 162, 0.25) 0, rgba(234, 142, 162, 0.25) 32px, transparent 33px),
-    linear-gradient(180deg, $bg-main 0%, $bg-soft 100%);
   color: $text;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
+  background:
+    radial-gradient(circle at top right, rgba(205, 216, 229, 0.45), transparent 28%),
+    radial-gradient(circle at bottom left, rgba(145, 164, 135, 0.18), transparent 24%),
+    linear-gradient(180deg, $bg-main 0%, $bg-soft 100%);
   overflow-x: hidden;
 }
 
@@ -44,24 +43,12 @@ select {
 h1,
 h2,
 h3,
-h4 {
-  margin-top: 0;
-}
-
+h4,
 p {
   margin-top: 0;
 }
 
-.section {
-  position: relative;
-  padding: 4rem 0;
-
-  @media (min-width: 768px) {
-    padding: 5.5rem 0;
-  }
-}
-
-.section-container {
+.site-container {
   width: min(100% - 1.5rem, $container);
   margin-inline: auto;
 
@@ -70,91 +57,87 @@ p {
   }
 }
 
-.paper-card {
-  background: $surface;
-  border: 2px solid rgba(43, 37, 35, 0.85);
-  border-radius: $radius-lg;
-  box-shadow: $shadow-card;
-}
-
-.panel-card {
-  background: rgba(255, 248, 237, 0.95);
-  border: 2px solid rgba(43, 37, 35, 0.85);
-  border-radius: $radius-md;
-  box-shadow: $shadow-soft;
+.section {
+  padding: $section-space 0;
+  position: relative;
 }
 
 .section-title {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(2rem, 4vw, 3.4rem);
-  line-height: 1.05;
-  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.5rem, 5vw, 4.4rem);
+  line-height: 0.95;
+  font-weight: 600;
+  letter-spacing: -0.03em;
 }
 
 .section-copy {
   max-width: 60ch;
   color: $text-soft;
-  line-height: 1.75;
+  line-height: 1.8;
   font-size: 1rem;
 }
 
-.script {
-  font-family: 'Caveat', cursive;
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: $green-700;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.surface {
+  background: rgba(248, 245, 239, 0.84);
+  border: 1px solid $line;
+  box-shadow: $shadow-soft;
+  backdrop-filter: blur(8px);
+}
+
+.panel {
+  background: $surface;
+  border: 1px solid $line;
+  box-shadow: $shadow-card;
 }
 
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 50px;
-  padding: 0.9rem 1.4rem;
+  min-height: 52px;
+  padding: 0.9rem 1.5rem;
   border-radius: 999px;
-  border: 2px solid $line;
-  font-weight: 700;
-  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
-  box-shadow: 5px 5px 0 rgba(43, 37, 35, 0.9);
-
-  &:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: 7px 7px 0 rgba(43, 37, 35, 0.9);
-  }
+  border: 1px solid transparent;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  cursor: pointer;
 }
 
 .btn--primary {
-  background: $rose;
-  color: $text;
+  background: $green-900;
+  color: $text-light;
+  box-shadow: 0 10px 20px rgba(79, 98, 69, 0.2);
+
+  &:hover {
+    background: $green-700;
+    transform: translateY(-2px);
+  }
 }
 
 .btn--secondary {
-  background: $yellow;
+  background: rgba(255, 255, 255, 0.58);
+  border-color: $line-strong;
   color: $text;
-}
 
-.sticker {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.45rem 0.8rem;
-  border: 2px solid $line;
-  border-radius: 999px;
-  background: $cream;
-  box-shadow: 4px 4px 0 rgba(43, 37, 35, 0.9);
-  font-size: 0.9rem;
-  font-weight: 700;
-}
-
-.browser-dots {
-  display: flex;
-  gap: 0.5rem;
-
-  span {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    display: block;
+  &:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
   }
+}
 
-  span:nth-child(1) { background: #7dbf58; }
-  span:nth-child(2) { background: #f0c44c; }
-  span:nth-child(3) { background: #f45a5a; }
+.decor-line {
+  width: 72px;
+  height: 1px;
+  background: rgba(184, 149, 104, 0.8);
 }

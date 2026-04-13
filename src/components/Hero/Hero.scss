@@ -1,176 +1,122 @@
 @use '../../styles/variables' as *;
 
 .hero {
-  padding-top: 2rem;
-
-  @media (min-width: 768px) {
-    padding-top: 3rem;
-  }
-}
-
-.hero__window {
-  padding: 1rem;
-  background: rgba(255, 248, 237, 0.92);
-
-  @media (min-width: 768px) {
-    padding: 1.5rem;
-  }
-}
-
-.hero__window-top {
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.35rem 0.35rem 1rem;
+  padding: 2rem 0;
 }
 
-.hero__window-label {
-  margin: 0;
-  color: $text-soft;
-  font-size: 0.95rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-}
-
-.hero__search {
-  display: flex;
+.hero__grid {
+  display: grid;
+  gap: 2rem;
   align-items: center;
-  min-height: 62px;
-  margin-bottom: 1.25rem;
-  padding: 0 1rem;
-  background: rgba(43, 37, 35, 0.06);
-}
 
-.hero__search-text {
-  color: $text-soft;
-  font-weight: 500;
+  @media (min-width: 980px) {
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 3rem;
+  }
 }
 
 .hero__content {
-  display: grid;
-  gap: 2rem;
-
-  @media (min-width: 1024px) {
-    grid-template-columns: 1fr 0.95fr;
-    align-items: start;
-  }
-}
-
-.hero__left {
-  position: relative;
-  padding: 1rem 0.35rem 0.5rem;
-}
-
-.hero__sticker {
-  margin-bottom: 1rem;
-}
-
-.hero__eyebrow {
-  margin-bottom: 0.4rem;
-  color: $berry;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  padding: 1rem 0;
 }
 
 .hero__title {
-  margin-bottom: 0.75rem;
-  font-size: clamp(3rem, 8vw, 6rem);
-  line-height: 0.9;
-  font-family: 'Playfair Display', serif;
-
-  .script {
-    display: inline-block;
-    margin-right: 0.45rem;
-    font-size: 1.2em;
-    color: $rose-dark;
-    transform: translateY(-0.08em);
-  }
+  max-width: 11ch;
 }
 
-.hero__headline {
-  max-width: 12ch;
-  margin-bottom: 1rem;
+.hero__copy {
+  margin-bottom: 2rem;
+}
+
+.hero__meta {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  div {
+    padding: 1rem 1.15rem;
+    border-top: 1px solid $line-strong;
+    border-bottom: 1px solid $line;
+    background: rgba(255, 255, 255, 0.28);
+  }
+
+  span {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: $text-soft;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+
+  strong {
+    font-size: 1.05rem;
+    font-weight: 600;
+  }
 }
 
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-top: 2rem;
 }
 
-.hero__facts {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 2rem;
+.hero__image-wrap {
+  position: relative;
+}
 
-  span {
-    padding: 0.55rem 0.9rem;
-    border-radius: 999px;
-    background: $mint;
-    border: 2px solid $line;
-    font-size: 0.9rem;
+.hero__image-card {
+  position: relative;
+  border-radius: $radius-xl;
+  padding: 1rem;
+}
+
+.hero__image-frame {
+  overflow: hidden;
+  border-radius: calc($radius-xl - 10px);
+  min-height: 580px;
+
+  @media (max-width: 767px) {
+    min-height: 420px;
+  }
+}
+
+.hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__floating-note {
+  position: absolute;
+  right: -0.75rem;
+  bottom: 2rem;
+  max-width: 240px;
+  padding: 1rem 1.1rem;
+  border-radius: $radius-md;
+  background: rgba(248, 245, 239, 0.92);
+
+  p {
+    margin-bottom: 0.3rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
     font-weight: 600;
   }
-}
 
-.hero__right {
-  display: grid;
-  gap: 1.25rem;
-}
-
-.hero__collage {
-  position: relative;
-  min-height: 420px;
-  padding: 1rem 0.5rem 0;
-}
-
-.hero__photo {
-  overflow: hidden;
-  padding: 0.4rem;
-  background: $surface;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 16px;
-  }
-}
-
-.hero__photo--large {
-  width: min(100%, 420px);
-  aspect-ratio: 0.92;
-  transform: rotate(-3deg);
-}
-
-.hero__photo--small {
-  position: absolute;
-  right: 0;
-  bottom: 1.5rem;
-  width: min(48%, 230px);
-  aspect-ratio: 0.82;
-  transform: rotate(7deg);
-  background: $surface-2;
-}
-
-.hero__note {
-  position: absolute;
-  left: 1.2rem;
-  bottom: 0;
-  transform: rotate(-6deg);
-  background: $yellow;
-}
-
-@media (max-width: 767px) {
-  .hero__window-label {
-    display: none;
+  span {
+    color: $text-soft;
+    font-size: 0.92rem;
   }
 
-  .hero__photo--small {
-    bottom: 0.5rem;
+  @media (max-width: 767px) {
+    position: static;
+    margin-top: 1rem;
+    max-width: none;
   }
 }

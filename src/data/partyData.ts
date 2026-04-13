@@ -1,31 +1,47 @@
 export const partyData = {
-  heroEyebrow: 'Mamma fyller 60',
-  heroTitle: 'Let’s celebrate 60 wonderful years',
+  title: 'Mammas 60-årsdag',
+  heroTitle: 'Välkommen att fira en alldeles särskild 60-årsdag',
   heroSubtitle:
-    'En kväll fylld av skratt, kärlek, god mat och fina minnen. Vi hoppas att du vill fira denna stora dag tillsammans med oss.',
-  introLabel: 'birthday website',
-  dateLabel: 'Lördag 3 oktober 2026',
-  timeLabel: '17:00 tills sent',
-  locationLabel: 'Norrtälje',
-  dressCode: 'Färgglatt, festligt och sommarfint',
-  contactName: 'Linnea',
-  contactEmail: 'linnea@example och Lovisa.com',
+    'En kväll fylld av värme, god mat, skratt och fina minnen. Vi hoppas att du vill vara med och fira denna stora dag tillsammans med oss.',
+  date: 'Lördag 3 oktober 2026',
+  time: '17:00 till sent',
+  location: 'Norrtälje',
+  dressCode: 'Sommarfint / elegant',
+  contactName: 'Linnea och Lovisa',
+  contactEmail: 'mail@example.com',
+  rsvpDeadline: '1 juli 2026',
+  rsvpLabel: 'OSA senast 1 juli 2026',
   formUrl:
     'https://docs.google.com/forms/d/e/1FAIpQLSfS_QKiFYfd9Xo3NPd5nmEBnAOA5CrqK5-V_gqmb4l9E47smw/viewform?embedded=true',
   formUrlPlain:
     'https://docs.google.com/forms/d/e/1FAIpQLSfS_QKiFYfd9Xo3NPd5nmEBnAOA5CrqK5-V_gqmb4l9E47smw/viewform',
-  photos: [
-    'https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=1200&q=80',
-    'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80',
-    'https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=1200&q=80',
-    'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80',
-    'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1200&q=80',
+  introHeading: 'En dag att samlas, fira och skapa nya minnen tillsammans',
+  introText:
+    'Vi vill bjuda in till en varm och vacker dag där familj och vänner får samlas för att uppmärksamma mamma och allt hon betyder för oss. Kvällen kommer att präglas av gemenskap, glädje och en lugn, festlig stämning.',
+  details: [
+    {
+      title: 'Datum',
+      value: '3 oktober 2026',
+      text: 'Vi samlas på eftermiddagen och firar tillsammans långt in på kvällen.',
+    },
+    {
+      title: 'Tid',
+      value: 'Från 17:00',
+      text: 'Kom gärna i tid så att du inte missar starten på firandet.',
+    },
+    {
+      title: 'Plats',
+      value: 'Norrtälje',
+      text: 'Mer information om adress och eventuella vägbeskrivningar kommer vid behov.',
+    },
+    {
+      title: 'Klädkod',
+      value: 'Sommarfint',
+      text: 'Tänk uppklätt men avslappnat, elegant och bekvämt.',
+    },
   ],
-  tinyFacts: [
-    'Huvudperson i kvällens firande',
-    'Världens bästa mamma',
-    'Garanterat ikonisk sedan 1966',
-    'Dansgolvsvänlig energi',
-    'Extra mycket kärlek denna kväll',
+  galleryImages: [
+    'https://unsplash.com/photos/lighted-hanging-disco-mirror-balls-249DzAuJTqQ',
+    'https://unsplash.com/photos/black-and-white-wooden-wall-with-white-and-black-ceramic-bowl-aTHv2s8PRyo',
   ],
 };

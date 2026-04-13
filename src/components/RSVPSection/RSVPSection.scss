@@ -1,0 +1,60 @@
+@use '../../styles/variables' as *;
+
+.rsvp__grid {
+  display: grid;
+  gap: 1.5rem;
+  align-items: start;
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 0.78fr 1.22fr;
+    gap: 2rem;
+  }
+}
+
+.rsvp__content {
+  padding: 1rem 0;
+}
+
+.rsvp__info {
+  display: grid;
+  gap: 1rem;
+  margin: 2rem 0;
+
+  div {
+    padding: 1rem 0;
+    border-bottom: 1px solid $line;
+  }
+
+  span {
+    display: block;
+    margin-bottom: 0.3rem;
+    color: $text-soft;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+
+  strong {
+    font-size: 1.05rem;
+    font-weight: 600;
+  }
+}
+
+.rsvp__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.rsvp__form {
+  border-radius: $radius-lg;
+  padding: 0.9rem;
+}
+
+.rsvp__iframe {
+  width: 100%;
+  min-height: 900px;
+  border: 0;
+  border-radius: calc($radius-lg - 10px);
+  background: white;
+}

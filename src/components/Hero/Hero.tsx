@@ -1,71 +1,80 @@
 import './Hero.scss';
+import { motion } from 'framer-motion';
 import { partyData } from '../../data/partyData';
-import { Countdown } from '../Countdown/Countdown';
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 28 },
+  visible: { opacity: 1, y: 0 },
+};
 
 export function Hero() {
   return (
-    <section className="hero section">
-      <div className="section-container">
-        <div className="hero__window paper-card">
-          <div className="hero__window-top">
-            <div className="browser-dots" aria-hidden="true">
-              <span />
-              <span />
-              <span />
+    <section className="hero">
+      <div className="site-container hero__grid">
+        <motion.div
+          className="hero__content"
+          initial="hidden"
+          animate="visible"
+          transition={{ staggerChildren: 0.12 }}
+        >
+          <motion.span variants={fadeUp} className="eyebrow">
+            {partyData.title}
+          </motion.span>
+
+          <motion.h1 variants={fadeUp} className="hero__title section-title">
+            {partyData.heroTitle}
+          </motion.h1>
+
+          <motion.p variants={fadeUp} className="section-copy hero__copy">
+            {partyData.heroSubtitle}
+          </motion.p>
+
+          <motion.div variants={fadeUp} className="hero__meta">
+            <div>
+              <span>Datum</span>
+              <strong>{partyData.date}</strong>
             </div>
 
-            <p className="hero__window-label">{partyData.introLabel}</p>
-          </div>
+            <div>
+              <span>Plats</span>
+              <strong>{partyData.location}</strong>
+            </div>
+          </motion.div>
 
-          <div className="hero__search panel-card">
-            <span className="hero__search-text">Searching for the best birthday ever...</span>
-          </div>
+          <motion.div variants={fadeUp} className="hero__actions">
+            <a href="#osa" className="btn btn--primary">
+              OSA här
+            </a>
 
-          <div className="hero__content">
-            <div className="hero__left">
-              <span className="sticker hero__sticker hero__sticker--top">60 years of icon energy</span>
+            <a href="#details" className="btn btn--secondary">
+              Läs mer
+            </a>
+          </motion.div>
+        </motion.div>
 
-              <p className="hero__eyebrow">{partyData.heroEyebrow}</p>
-              <h1 className="hero__title">
-                <span className="script">Happy</span> Birthday
-              </h1>
-
-              <h2 className="hero__headline section-title">{partyData.heroTitle}</h2>
-              <p className="section-copy">{partyData.heroSubtitle}</p>
-
-              <div className="hero__actions">
-                <a href="#osa" className="btn btn--primary">
-                  OSA här
-                </a>
-                <a href="#info" className="btn btn--secondary">
-                  Se festinfo
-                </a>
-              </div>
-
-              <div className="hero__facts">
-                {partyData.tinyFacts.map((fact) => (
-                  <span key={fact}>{fact}</span>
-                ))}
-              </div>
+        <motion.div
+          className="hero__image-wrap"
+          initial={{ opacity: 0, y: 30, scale: 0.97 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+        >
+          <div className="hero__image-card surface">
+            <div className="hero__image-frame">
+              <motion.img
+                src={partyData.galleryImages[0]}
+                alt="Festlig hero-bild"
+                className="hero__image"
+                animate={{ y: [0, -6, 0] }}
+                transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+              />
             </div>
 
-            <div className="hero__right">
-              <div className="hero__collage">
-                <div className="hero__photo hero__photo--large panel-card">
-                  <img src={partyData.photos[0]} alt="Festlig inspirationsbild" />
-                </div>
-
-                <div className="hero__photo hero__photo--small panel-card">
-                  <img src={partyData.photos[1]} alt="Porträtt inspirationsbild" />
-                </div>
-
-                <div className="hero__note sticker">main character vibes</div>
-              </div>
-
-              <Countdown />
+            <div className="hero__floating-note panel">
+              <p>En kväll att minnas</p>
+              <span>{partyData.rsvpLabel}</span>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
