@@ -4,8 +4,6 @@ import decorTwo from '../../assets/decor-2.png';
 import { partyData } from '../../data/partyData';
 
 export function Footer() {
-  const [primaryEmail] = partyData.contactEmails;
-
   return (
     <footer className="footer section">
       <div className="site-container">
