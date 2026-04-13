@@ -35,7 +35,8 @@ export function Hero() {
           </motion.span>
 
           <motion.h1 variants={fadeUp} className="section-title hero__title">
-            {partyData.heroTitle}
+            <span className="hero__title-line">Bettan</span>
+            <span className="hero__title-line">60 år</span>
           </motion.h1>
 
           <motion.p variants={fadeUp} className="hero__subtitle">
