@@ -1,60 +1,82 @@
 @use '../../styles/variables' as *;
 
-.rsvp__grid {
+.rsvp {
+  background: $blue-900;
+  color: $text-light;
+}
+
+.rsvp__stripe {
+  height: 18px;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(248, 240, 229, 0.92) 0,
+    rgba(248, 240, 229, 0.92) 8px,
+    transparent 8px,
+    transparent 14px
+  );
+}
+
+.rsvp__panel {
+  padding: clamp(1.5rem, 4vw, 2rem);
   display: grid;
   gap: 1.5rem;
-  align-items: start;
+  background: linear-gradient(180deg, rgba(95, 116, 135, 0.98), rgba(114, 135, 112, 0.92));
 
-  @media (min-width: 1024px) {
-    grid-template-columns: 0.78fr 1.22fr;
-    gap: 2rem;
+  @media (min-width: 860px) {
+    grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+    align-items: start;
   }
 }
 
 .rsvp__content {
-  padding: 1rem 0;
-}
-
-.rsvp__info {
-  display: grid;
-  gap: 1rem;
-  margin: 2rem 0;
-
-  div {
-    padding: 1rem 0;
-    border-bottom: 1px solid $line;
+  .eyebrow,
+  .section-copy {
+    color: rgba(248, 240, 229, 0.82);
   }
 
-  span {
-    display: block;
-    margin-bottom: 0.3rem;
-    color: $text-soft;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
+  .section-title {
+    color: $text-light;
+  }
+}
+
+.rsvp__facts {
+  margin: 1.6rem 0;
+  border-top: 1px solid rgba(248, 240, 229, 0.22);
+  border-bottom: 1px solid rgba(248, 240, 229, 0.22);
+  padding: 1rem 0;
+
+  p {
+    margin: 0 0 0.7rem;
+    line-height: 1.7;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
   }
 
   strong {
-    font-size: 1.05rem;
-    font-weight: 600;
+    font-weight: 700;
   }
 }
 
 .rsvp__actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.8rem;
 }
 
 .rsvp__form {
-  border-radius: $radius-lg;
-  padding: 0.9rem;
+  padding: 0.85rem;
+  background: rgba(251, 246, 238, 0.98);
 }
 
 .rsvp__iframe {
   width: 100%;
-  min-height: 900px;
+  min-height: 820px;
   border: 0;
-  border-radius: calc($radius-lg - 10px);
   background: white;
+
+  @media (max-width: 640px) {
+    min-height: 700px;
+  }
 }

@@ -2,19 +2,23 @@ import './App.scss';
 import { Hero } from './components/Hero/Hero';
 import { StorySection } from './components/StorySection/StorySection';
 import { EventDetails } from './components/EventDetails/EventDetails';
-import { GallerySection } from './components/GallerySection/GallerySection';
+import { CountdownSection } from './components/CountdownSection/CountdownSection';
 import { RSVPSection } from './components/RSVPSection/RSVPSection';
+import { CelebrationSection } from './components/CelebrationSection/CelebrationSection';
 import { Footer } from './components/Footer/Footer';
 
 function App() {
   return (
     <div className="site-shell">
-      <Hero />
-      <StorySection />
-      <EventDetails />
-      <GallerySection />
-      <RSVPSection />
-      <Footer />
+      <main className="invitation-paper">
+        <Hero />
+        <CountdownSection />
+        <StorySection />
+        <EventDetails />
+        <RSVPSection />
+        <CelebrationSection />
+        <Footer />
+      </main>
     </div>
   );
 }

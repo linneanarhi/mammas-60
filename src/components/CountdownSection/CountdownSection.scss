@@ -1,0 +1,62 @@
+@use '../../styles/variables' as *;
+
+.countdown {
+  padding-top: 1rem;
+}
+
+.countdown__intro {
+  text-align: center;
+  margin-bottom: 1.5rem;
+
+  .section-copy {
+    margin: 0 auto;
+  }
+}
+
+.countdown__band {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: rgba(196, 214, 225, 0.28);
+  border-top: 1px solid $line-strong;
+  border-bottom: 1px solid $line-strong;
+
+  @media (max-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.countdown__item {
+  padding: 1.2rem 1rem 1.1rem;
+  text-align: center;
+  border-right: 1px solid $line;
+
+  &:last-child {
+    border-right: 0;
+  }
+
+  @media (max-width: 640px) {
+    &:nth-child(2n) {
+      border-right: 0;
+    }
+
+    &:nth-child(-n + 2) {
+      border-bottom: 1px solid $line;
+    }
+  }
+
+  strong {
+    display: block;
+    margin-bottom: 0.2rem;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: $berry-900;
+  }
+
+  span {
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: $text-soft;
+  }
+}

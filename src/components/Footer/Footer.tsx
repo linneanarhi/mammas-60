@@ -7,19 +7,24 @@ export function Footer() {
     <footer className="footer section">
       <div className="site-container">
         <motion.div
-          className="footer__box surface"
+          className="footer__layout"
           initial={{ opacity: 0, y: 22 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="eyebrow">Med värme</span>
-          <h2 className="footer__title">Vi ser fram emot att fira tillsammans med dig</h2>
-          <p className="footer__copy">
-            Har du frågor innan dagen är det bara att höra av dig till{' '}
-            {partyData.contactName} på{' '}
-            <a href={`mailto:${partyData.contactEmail}`}>{partyData.contactEmail}</a>.
-          </p>
+          <div className="footer__copy">
+            <span className="eyebrow">Välkommen</span>
+            <h2 className="footer__title">{partyData.closingHeading}</h2>
+            <p className="section-copy">
+              {partyData.closingText} Har du frågor innan dagen är det bara att
+              höra av dig till {partyData.contactName}.
+            </p>
+          </div>
+
+          <div className="footer__image">
+            <img src={partyData.galleryImages.accent} alt="Lekfull bild på mamma" />
+          </div>
         </motion.div>
       </div>
     </footer>

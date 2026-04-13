@@ -3,77 +3,62 @@ import { motion } from 'framer-motion';
 import { partyData } from '../../data/partyData';
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 28 },
+  hidden: { opacity: 0, y: 22 },
   visible: { opacity: 1, y: 0 },
 };
 
 export function Hero() {
   return (
-    <section className="hero">
-      <div className="site-container hero__grid">
+    <section className="hero" id="top">
+      <motion.div
+        className="hero__media"
+        initial={{ opacity: 0, scale: 0.98 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+      >
+        <img src={partyData.galleryImages.hero} alt="Porträtt av mamma" className="hero__image" />
+        <div className="hero__overlay" />
+      </motion.div>
+
+      <div className="site-container">
         <motion.div
-          className="hero__content"
+          className="hero__card"
           initial="hidden"
           animate="visible"
           transition={{ staggerChildren: 0.12 }}
         >
           <motion.span variants={fadeUp} className="eyebrow">
-            {partyData.title}
+            {partyData.heroBadge}
           </motion.span>
 
-          <motion.h1 variants={fadeUp} className="hero__title section-title">
+          <motion.h1 variants={fadeUp} className="section-title hero__title">
             {partyData.heroTitle}
           </motion.h1>
 
-          <motion.p variants={fadeUp} className="section-copy hero__copy">
+          <motion.p variants={fadeUp} className="hero__subtitle">
             {partyData.heroSubtitle}
           </motion.p>
 
-          <motion.div variants={fadeUp} className="hero__meta">
-            <div>
-              <span>Datum</span>
-              <strong>{partyData.date}</strong>
-            </div>
+          <motion.p variants={fadeUp} className="hero__invitation">
+            {partyData.invitationLine}
+          </motion.p>
 
-            <div>
-              <span>Plats</span>
-              <strong>{partyData.location}</strong>
-            </div>
+          <motion.div variants={fadeUp} className="hero__meta">
+            <p>{partyData.date}</p>
+            <span />
+            <p>{partyData.location}</p>
+            <span />
+            <p>{partyData.time}</p>
           </motion.div>
 
           <motion.div variants={fadeUp} className="hero__actions">
             <a href="#osa" className="btn btn--primary">
-              OSA här
+              OSA
             </a>
-
             <a href="#details" className="btn btn--secondary">
-              Läs mer
+              Läs detaljer
             </a>
           </motion.div>
-        </motion.div>
-
-        <motion.div
-          className="hero__image-wrap"
-          initial={{ opacity: 0, y: 30, scale: 0.97 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
-        >
-          <div className="hero__image-card surface">
-            <div className="hero__image-frame">
-              <motion.img
-                src={partyData.galleryImages[0]}
-                alt="Festlig hero-bild"
-                className="hero__image"
-                animate={{ y: [0, -6, 0] }}
-                transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-              />
-            </div>
-
-            <div className="hero__floating-note panel">
-              <p>En kväll att minnas</p>
-              <span>{partyData.rsvpLabel}</span>
-            </div>
-          </div>
         </motion.div>
       </div>
     </section>

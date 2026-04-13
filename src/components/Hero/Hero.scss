@@ -1,89 +1,17 @@
 @use '../../styles/variables' as *;
 
 .hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 2rem 0;
-}
-
-.hero__grid {
-  display: grid;
-  gap: 2rem;
-  align-items: center;
-
-  @media (min-width: 980px) {
-    grid-template-columns: 0.95fr 1.05fr;
-    gap: 3rem;
-  }
-}
-
-.hero__content {
-  padding: 1rem 0;
-}
-
-.hero__title {
-  max-width: 11ch;
-}
-
-.hero__copy {
-  margin-bottom: 2rem;
-}
-
-.hero__meta {
-  display: grid;
-  gap: 1rem;
-  margin-bottom: 2rem;
-
-  @media (min-width: 640px) {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  div {
-    padding: 1rem 1.15rem;
-    border-top: 1px solid $line-strong;
-    border-bottom: 1px solid $line;
-    background: rgba(255, 255, 255, 0.28);
-  }
-
-  span {
-    display: block;
-    margin-bottom: 0.35rem;
-    color: $text-soft;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-  }
-
-  strong {
-    font-size: 1.05rem;
-    font-weight: 600;
-  }
-}
-
-.hero__actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.hero__image-wrap {
   position: relative;
+  padding: 0 0 2.5rem;
 }
 
-.hero__image-card {
+.hero__media {
   position: relative;
-  border-radius: $radius-xl;
-  padding: 1rem;
-}
-
-.hero__image-frame {
+  min-height: 370px;
   overflow: hidden;
-  border-radius: calc($radius-xl - 10px);
-  min-height: 580px;
 
-  @media (max-width: 767px) {
-    min-height: 420px;
+  @media (max-width: 640px) {
+    min-height: 300px;
   }
 }
 
@@ -93,30 +21,89 @@
   object-fit: cover;
 }
 
-.hero__floating-note {
+.hero__overlay {
   position: absolute;
-  right: -0.75rem;
-  bottom: 2rem;
-  max-width: 240px;
-  padding: 1rem 1.1rem;
-  border-radius: $radius-md;
-  background: rgba(248, 245, 239, 0.92);
+  inset: 0;
+  background: linear-gradient(180deg, rgba(42, 34, 30, 0.08), rgba(42, 34, 30, 0.3));
+}
+
+.hero__card {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 620px);
+  margin: -4.75rem auto 0;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  background: rgba(136, 79, 99, 0.94);
+  color: $text-light;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(41, 33, 27, 0.16);
+
+  .eyebrow {
+    color: rgba(248, 240, 229, 0.78);
+  }
+}
+
+.hero__title {
+  margin-inline: auto;
+  max-width: 8ch;
+  color: $text-light;
+  text-transform: uppercase;
+}
+
+.hero__subtitle {
+  margin: 0 auto 1rem;
+  max-width: 42ch;
+  font-size: 1.02rem;
+  line-height: 1.8;
+}
+
+.hero__invitation {
+  margin: 0 auto 1.8rem;
+  max-width: 44ch;
+  color: rgba(248, 240, 229, 0.82);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  align-items: center;
+  margin-bottom: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
 
   p {
-    margin-bottom: 0.3rem;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.5rem;
-    font-weight: 600;
+    margin: 0;
   }
 
   span {
-    color: $text-soft;
-    font-size: 0.92rem;
+    width: 18px;
+    height: 1px;
+    background: rgba(248, 240, 229, 0.45);
   }
 
-  @media (max-width: 767px) {
-    position: static;
-    margin-top: 1rem;
-    max-width: none;
+  @media (max-width: 640px) {
+    flex-direction: column;
+
+    span {
+      width: 1px;
+      height: 14px;
+    }
+  }
+}
+
+.hero__actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+
+  .btn--secondary {
+    border-color: rgba(248, 240, 229, 0.45);
+    color: $text-light;
   }
 }
