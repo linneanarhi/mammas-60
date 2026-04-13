@@ -8,16 +8,17 @@ export const partyData = {
   title: 'Mammas 60-\u00e5rsfest',
   heroTitle: 'Bettan 60 \u00e5r',
   heroSubtitle:
-    'Det finns m\u00e5nga s\u00e4tt att fylla sextio p\u00e5. Mamma g\u00f6r det med stil, skratt och bra h\u00e5r i motvind. Det vill vi s\u00e5klart fira ordentligt.',
+    'Det finns m\u00e5nga s\u00e4tt att fylla sextio p\u00e5. Mamma g\u00f6r det med stil, skratt och bra h\u00e5r i motvind. Det vill vi s\u00e5klart fira ordentligt. Vi firar livet!',
   heroBadge: 'L\u00f6rdag 3 oktober 2026',
-  invitationLine: 'Du \u00e4r varmt inbjuden till en kv\u00e4ll med middag, bubbel, prat, skratt och allt det d\u00e4r som g\u00f6r en fest riktigt h\u00e4rlig.',
+  invitationLine:
+    'Du \u00e4r varmt inbjuden till en kv\u00e4ll med middag, bubbel, prat, skratt och allt det d\u00e4r som g\u00f6r en fest riktigt h\u00e4rlig.',
   date: 'L\u00f6rdag 3 oktober 2026',
   time: '17:00',
   location: 'Imperiet Industries',
   address: 'Baldersgatan 16, 761 50 Norrt\u00e4lje',
   contactName: 'Linnea och Lovisa N\u00e4rhi',
-  contactPhone: '0725752777',
-  contactEmail: 'narhi07@gmail.com',
+  contactPhones: ['0725752777', '0725866999'],
+  contactEmails: ['narhi07@gmail.com', 'narhi02@gmail.com'],
   rsvpDeadline: '1 juli 2026',
   rsvpLabel: 'OSA senast 1 juli 2026',
   targetDate: '2026-10-03T17:00:00+02:00',
@@ -25,11 +26,10 @@ export const partyData = {
     'https://docs.google.com/forms/d/e/1FAIpQLSfS_QKiFYfd9Xo3NPd5nmEBnAOA5CrqK5-V_gqmb4l9E47smw/viewform?embedded=true',
   formUrlPlain:
     'https://docs.google.com/forms/d/e/1FAIpQLSfS_QKiFYfd9Xo3NPd5nmEBnAOA5CrqK5-V_gqmb4l9E47smw/viewform',
-  introHeading: 'En kv\u00e4ll som ska k\u00e4nnas precis som hon: varm, stilig och ganska sv\u00e5r att toppa',
+  introHeading: 'En kv\u00e4ll som ska k\u00e4nnas precis som hon: varm, ROLIG och ganska sv\u00e5r att toppa',
   introText:
-    'Vi vill samla familj och v\u00e4nner f\u00f6r en kv\u00e4ll som \u00e4r fin utan att bli stel, och festlig utan att bli tillgjord. T\u00e4nk l\u00e5nga samtal, glada sk\u00e5lar, m\u00e4nniskor man tycker om och en f\u00f6delsedag som f\u00e5r vara b\u00e5de elegant och levande.',
-  introQuote:
-    'Kort sagt: snyggt, varmt, lite bubbligt och mycket mamma.',
+    'Vi vill samla familj och v\u00e4nner f\u00f6r en kv\u00e4ll som firar livet (och mamma!). T\u00e4nk l\u00e5nga samtal, glada sk\u00e5lar, m\u00e4nniskor man tycker om!',
+  introQuote: 'Kort sagt: roligt, varmt, lite bubbligt och mycket mamma.',
   detailsHeading: 'Det viktigaste, utan kr\u00e5ngel',
   detailsLead:
     'Allt du beh\u00f6ver veta finns h\u00e4r. Resten tar vi p\u00e5 plats med ett glas i handen.',
@@ -45,7 +45,7 @@ export const partyData = {
       text: 'Baldersgatan 16, 761 50 Norrt\u00e4lje.',
     },
     {
-      title: 'Stil',
+      title: 'Kl\u00e4dkod',
       value: 'Festfin',
       text: 'G\u00e4rna uppkl\u00e4tt, g\u00e4rna personligt, g\u00e4rna n\u00e5got du k\u00e4nner dig riktigt snygg i.',
     },

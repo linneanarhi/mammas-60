@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { partyData } from '../../data/partyData';
 
 export function Footer() {
+  const [primaryEmail] = partyData.contactEmails;
+
   return (
     <footer className="footer section">
       <div className="site-container">
@@ -18,7 +20,8 @@ export function Footer() {
             <h2 className="footer__title">{partyData.closingHeading}</h2>
             <p className="section-copy">
               {partyData.closingText} Har du frågor innan dagen är det bara att
-              höra av dig till {partyData.contactName}.
+              höra av dig till {partyData.contactName} på{' '}
+              <a href={`mailto:${primaryEmail}`}>{primaryEmail}</a>.
             </p>
           </div>
 

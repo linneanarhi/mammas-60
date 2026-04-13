@@ -3,6 +3,9 @@ import { motion } from 'framer-motion';
 import { partyData } from '../../data/partyData';
 
 export function CelebrationSection() {
+  const [primaryPhone, secondaryPhone] = partyData.contactPhones;
+  const [primaryEmail, secondaryEmail] = partyData.contactEmails;
+
   return (
     <section className="celebration section">
       <div className="site-container celebration__grid">
@@ -28,8 +31,10 @@ export function CelebrationSection() {
           <p className="section-copy">{partyData.speechText}</p>
 
           <div className="celebration__contact">
-            <a href={`tel:${partyData.contactPhone}`}>{partyData.contactPhone}</a>
-            <a href={`mailto:${partyData.contactEmail}`}>{partyData.contactEmail}</a>
+            <a href={`tel:${primaryPhone}`}>{primaryPhone}</a>
+            <a href={`tel:${secondaryPhone}`}>{secondaryPhone}</a>
+            <a href={`mailto:${primaryEmail}`}>{primaryEmail}</a>
+            <a href={`mailto:${secondaryEmail}`}>{secondaryEmail}</a>
           </div>
         </motion.div>
       </div>

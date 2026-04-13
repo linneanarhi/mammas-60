@@ -3,6 +3,9 @@ import { motion } from 'framer-motion';
 import { partyData } from '../../data/partyData';
 
 export function RSVPSection() {
+  const [primaryPhone, secondaryPhone] = partyData.contactPhones;
+  const [primaryEmail, secondaryEmail] = partyData.contactEmails;
+
   return (
     <section className="rsvp section" id="osa">
       <div className="site-container">
@@ -28,11 +31,13 @@ export function RSVPSection() {
               </p>
               <p>
                 <strong>Telefon:</strong>{' '}
-                <a href={`tel:${partyData.contactPhone}`}>{partyData.contactPhone}</a>
+                <a href={`tel:${primaryPhone}`}>{primaryPhone}</a> eller{' '}
+                <a href={`tel:${secondaryPhone}`}>{secondaryPhone}</a>
               </p>
               <p>
                 <strong>E-post:</strong>{' '}
-                <a href={`mailto:${partyData.contactEmail}`}>{partyData.contactEmail}</a>
+                <a href={`mailto:${primaryEmail}`}>{primaryEmail}</a> eller{' '}
+                <a href={`mailto:${secondaryEmail}`}>{secondaryEmail}</a>
               </p>
             </div>
 
