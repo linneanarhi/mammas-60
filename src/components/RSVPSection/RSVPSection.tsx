@@ -52,6 +52,7 @@ export function RSVPSection() {
               >
                 Öppna formuläret
               </a>
+              <p>Använder du mobil kan de va lättare att fylla i formuläret via denna knapp ⬆</p>
             </div>
           </motion.div>
 
