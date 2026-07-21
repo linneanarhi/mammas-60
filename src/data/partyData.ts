@@ -19,8 +19,8 @@ export const partyData = {
   contactName: 'Linnea och Lovisa',
   contactPhones: ['0725752777', '0725866999'],
   contactEmails: ['narhi07@gmail.com', 'narhi02@gmail.com'],
-  rsvpDeadline: '1 juli 2026',
-  rsvpLabel: 'OSA senast 1 juli 2026',
+  rsvpDeadline: '31 augusti 2026',
+  rsvpLabel: 'OSA senast måndag 31 augusti 2026',
   targetDate: '2026-10-03T17:00:00+02:00',
   formUrl:
     'https://docs.google.com/forms/d/e/1FAIpQLSfS_QKiFYfd9Xo3NPd5nmEBnAOA5CrqK5-V_gqmb4l9E47smw/viewform?embedded=true',
@@ -37,7 +37,7 @@ export const partyData = {
     {
       title: 'N\u00e4r',
       value: 'L\u00f6rdag 3 oktober 2026',
-      text: 'Vi drar ig\u00e5ng klockan 17:00 och l\u00e5ter kv\u00e4llen f\u00e5 leva vidare i lugn och gl\u00e4dje.',
+      text: 'Vi drar ig\u00e5ng klockan 17:00 och l\u00e5ter kv\u00e4llen f\u00e5 leva vidare.',
     },
     {
       title: 'Var',
