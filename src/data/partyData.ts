@@ -19,7 +19,7 @@ export const partyData = {
   contactName: 'Linnea och Lovisa',
   contactPhones: ['0725752777', '0725866999'],
   contactEmails: ['narhi07@gmail.com', 'narhi02@gmail.com'],
-  rsvpDeadline: '31 augusti 2026',
+  rsvpDeadline: '14 september 2026',
   rsvpLabel: 'OSA senast måndag 14 september 2026',
   targetDate: '2026-10-03T17:00:00+02:00',
   formUrl:
