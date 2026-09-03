@@ -20,7 +20,7 @@ export const partyData = {
   contactPhones: ['0725752777', '0725866999'],
   contactEmails: ['narhi07@gmail.com', 'narhi02@gmail.com'],
   rsvpDeadline: '31 augusti 2026',
-  rsvpLabel: 'OSA senast måndag 31 augusti 2026',
+  rsvpLabel: 'OSA senast måndag 14 september 2026',
   targetDate: '2026-10-03T17:00:00+02:00',
   formUrl:
     'https://docs.google.com/forms/d/e/1FAIpQLSfS_QKiFYfd9Xo3NPd5nmEBnAOA5CrqK5-V_gqmb4l9E47smw/viewform?embedded=true',
